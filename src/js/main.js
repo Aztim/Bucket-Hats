@@ -2,6 +2,9 @@ import './vendor/focus-visible.min.js';
 import './components/main-slider';
 import './components/catalog-slider';
 import './components/marketing';
+import './components/catalog-filter-toggle';
+import './components/catalog-props';
+import vars from '../js/_vars';
 
 import {resizeContent} from './functions/resize';
 import {scrollTo} from './functions/smooth-scroll';
