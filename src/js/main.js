@@ -4,6 +4,8 @@ import './components/catalog-slider';
 import './components/marketing';
 import './components/catalog-filter-toggle';
 import './components/catalog-props';
+import './components/card-select';
+import './components/stepper';
 import vars from '../js/_vars';
 
 import {resizeContent} from './functions/resize';
