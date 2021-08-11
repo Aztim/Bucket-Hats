@@ -6,6 +6,8 @@ import './components/catalog-filter-toggle';
 import './components/catalog-props';
 import './components/card-select';
 import './components/stepper';
+import './components/card-slider';
+import SimpleBar from 'simplebar';
 import vars from '../js/_vars';
 
 import {resizeContent} from './functions/resize';
