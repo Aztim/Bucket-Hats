@@ -7,6 +7,8 @@ import './components/catalog-props';
 import './components/card-select';
 import './components/stepper';
 import './components/card-slider';
+import './components/card-bottom-tabs';
+import './components/products';
 import SimpleBar from 'simplebar';
 import vars from '../js/_vars';
 
