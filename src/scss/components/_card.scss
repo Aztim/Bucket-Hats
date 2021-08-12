@@ -14,17 +14,17 @@
   .container {
     display: flex;
 
-    // @include sm {
-    //   flex-wrap: wrap;
-    // }
+    @include sm {
+      flex-wrap: wrap;
+    }
   }
 
   &__left {
     width: 57.5%;
 
-    // @include sm {
-    //   width: 100%;
-    // }
+    @include sm {
+      width: 100%;
+    }
   }
 
   &__right {
@@ -32,14 +32,14 @@
     padding-left: 10.7%;
     width: calc(100% - 57.5%);
 
-    // @include lg {
-    //   padding-left: 5%;
-    // }
+    @include lg {
+      padding-left: 5%;
+    }
 
-    // @include sm {
-    //   padding-left: 0;
-    //   width: 100%;
-    // }
+    @include sm {
+      padding-left: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -231,9 +231,9 @@
     align-items: center;
     margin-bottom: 8px;
 
-    // @include lg {
-    //   flex-wrap: wrap;
-    // }
+    @include lg {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -241,9 +241,9 @@
       margin-right: 5px;
     }
 
-    // @include lg {
-    //   margin-bottom: 5px;
-    // }
+    @include lg {
+      margin-bottom: 5px;
+    }
   }
 
   &__btn {
@@ -346,9 +346,9 @@
   }
 
   &__item {
-    // @include md {
-    //   margin-bottom: 5px;
-    // }
+    @include md {
+      margin-bottom: 5px;
+    }
   }
 
   &__social {
@@ -360,9 +360,9 @@
       margin-right: 13px;
     }
 
-    // @include sm {
-    //   width: 100%;
-    // }
+    @include sm {
+      width: 100%;
+    }
   }
 }
 
@@ -374,13 +374,13 @@
     padding-top: 30px;
     width: 16%;
 
-    // @include md {
-    //   width: 35%;
-    // }
+    @include md {
+      width: 35%;
+    }
 
-    // @include xs {
-    //   width: 100%;
-    // }
+    @include xs {
+      width: 100%;
+    }
   }
 
   .simplebar-track.simplebar-vertical {
@@ -404,16 +404,16 @@
     padding-left: 125px;
     width: 84%;
 
-    // @include md {
-    //   padding-right: 50px;
-    //   padding-left: 50px;
-    // }
+    @include md {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
 
-    // @include xs {
-    //   padding-right: 0;
-    //   padding-left: 0;
-    //   width: 100%;
-    // }
+    @include xs {
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+    }
   }
 
   &__navigation {
@@ -461,9 +461,9 @@
     }
   }
 
-  // @include xs {
-  //   flex-wrap: wrap;
-  // }
+  @include xs {
+    flex-wrap: wrap;
+  }
 }
 
 .card-related {

@@ -3,17 +3,17 @@
     padding-top: 50px;
     padding-bottom: 50px;
 
-    // @include xs {
-    //   padding-bottom: 0;
-    // }
+    @include xs {
+      padding-bottom: 0;
+    }
   }
 
   &__list {
     display: flex;
 
-    // @include md {
-    //   flex-wrap: wrap;
-    // }
+    @include md {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -23,11 +23,11 @@
     &:not(:last-child) {
       margin-right: 0.6%;
     }
-    // @include md {
-    //   margin-right: 0;
-    //   margin-bottom: 20px;
-    //   width: 100%;
-    // }
+    @include md {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
   }
 }
 
@@ -58,11 +58,11 @@
     background-image: url("../img/accs.jpg");
   }
 
-  // @include md {
-  //   padding: 50px 20px;
-  // }
+  @include md {
+    padding: 50px 20px;
+  }
 
-  // @include sm {
-  //   padding-right: 150px;
-  // }
+  @include sm {
+    padding-right: 150px;
+  }
 }

@@ -3,9 +3,9 @@
     padding-top: 55px;
     padding-bottom: 55px;
 
-    // @include md {
-    //   padding-bottom: 0;
-    // }
+    @include md {
+      padding-bottom: 0;
+    }
   }
 
   &__nav {
@@ -17,9 +17,9 @@
   &__item {
     margin: 0 18px;
 
-    // @include xs {
-    //   margin: 0 10px;
-    // }
+    @include xs {
+      margin: 0 10px;
+    }
   }
 
   &__btn-center {
@@ -54,9 +54,9 @@
       }
     }
 
-    // @include md {
-    //   margin-top: 0;
-    // }
+    @include md {
+      margin-top: 0;
+    }
   }
 
   &__btn {
@@ -69,9 +69,9 @@
       }
     }
 
-    // @include sm {
-    //   font-size: 20px;
-    // }
+    @include sm {
+      font-size: 20px;
+    }
   }
 }
 
@@ -87,51 +87,51 @@
     &:nth-last-child(-n+5) {
       margin-bottom: 0;
 
-      // @include md {
-      //   margin-bottom: 50px;
-      // }
+      @include md {
+        margin-bottom: 50px;
+      }
 
-      // @include xs {
-      //   margin-bottom: 30px;
-      // }
+      @include xs {
+        margin-bottom: 30px;
+      }
     }
 
     &:nth-child(5n) {
       margin-right: 0;
 
-      // @include md {
-      //   margin-right: 5%;
-      // }
+      @include md {
+        margin-right: 5%;
+      }
 
-      // @include xs {
-      //   margin-right: 4%;
-      // }
+      @include xs {
+        margin-right: 4%;
+      }
     }
 
-    // &:nth-child(3n) {
-    //   @include md {
-    //     margin-right: 0;
-    //   }
+    &:nth-child(3n) {
+      @include md {
+        margin-right: 0;
+      }
 
-    //   @include xs {
-    //     margin-right: 4%;
-    //   }
-    // }
+      @include xs {
+        margin-right: 4%;
+      }
+    }
 
-    // &:nth-child(2n) {
-    //   @include xs {
-    //     margin-right: 0;
-    //   }
-    // }
+    &:nth-child(2n) {
+      @include xs {
+        margin-right: 0;
+      }
+    }
 
-    // @include md {
-    //   margin-right: 5%;
-    //   width: 30%;
-    // }
+    @include md {
+      margin-right: 5%;
+      width: 30%;
+    }
 
-    // @include xs {
-    //   margin-right: 4%;
-    //   width: 48%;
-    // }
+    @include xs {
+      margin-right: 4%;
+      width: 48%;
+    }
   }
 }

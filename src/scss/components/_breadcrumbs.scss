@@ -68,26 +68,26 @@
     display: flex;
     align-items: center;
 
-    // @include xs {
-    //   flex-wrap: wrap;
-    // }
+    @include xs {
+      flex-wrap: wrap;
+    }
   }
 
   .breadcrumbs__list {
     border-bottom: none;
 
-    // @include xs {
-    //   margin-bottom: 0;
-    //   width: 100%;
-    // }
+    @include xs {
+      margin-bottom: 0;
+      width: 100%;
+    }
   }
 
   .card-prev {
     margin-left: auto;
 
-    // @include xs {
-    //   margin-left: 0;
-    // }
+    @include xs {
+      margin-left: 0;
+    }
   }
 
   .card-next {

@@ -8,15 +8,15 @@
     padding-top: 98px;
     padding-bottom: 0;
 
-    // @include lg {
-    //   padding: 0 100px;
-    //   padding-top: 98px;
-    // }
+    @include lg {
+      padding: 0 100px;
+      padding-top: 98px;
+    }
 
-    // @include md {
-    //   padding: 0;
-    //   padding-top: 80px;
-    // }
+    @include md {
+      padding: 0;
+      padding-top: 80px;
+    }
   }
 
   &__top {
@@ -24,30 +24,30 @@
     justify-content: space-between;
     padding-bottom: 95px;
 
-    // @include sm {
-    //   flex-wrap: wrap;
-    //   padding-bottom: 50px;
-    // }
+    @include sm {
+      flex-wrap: wrap;
+      padding-bottom: 50px;
+    }
   }
 
   &__column {
-    // &:last-child {
-    //   @include md {
-    //     width: 40%;
-    //   }
+    &:last-child {
+      @include md {
+        width: 40%;
+      }
 
-    //   @include sm {
-    //     margin-top: 40px;
-    //     width: 100%;
-    //   }
-    // }
+      @include sm {
+        margin-top: 40px;
+        width: 100%;
+      }
+    }
 
     &:nth-child(2) {
       margin-left: -60px;
 
-      // @include md {
-      //   margin-left: 0;
-      // }
+      @include md {
+        margin-left: 0;
+      }
     }
 
     &--flex {
@@ -73,9 +73,9 @@
         &:not(:last-child) {
           margin-right: 43px;
 
-          // @include sm {
-          //   margin-right: 20px;
-          // }
+          @include sm {
+            margin-right: 20px;
+          }
         }
       }
     }
@@ -126,9 +126,9 @@
       color: var(--color-dark);
     }
 
-    // @include xs {
-    //   font-size: 12px;
-    // }
+    @include xs {
+      font-size: 12px;
+    }
   }
 
   &__title {
@@ -138,9 +138,9 @@
     font-size: 16px;
     text-transform: uppercase;
 
-    // @include xs {
-    //   font-size: 14px;
-    // }
+    @include xs {
+      font-size: 14px;
+    }
   }
 
   &__form {
@@ -148,9 +148,9 @@
     width: 646px;
     transform: translateY(3px);
 
-    // @include md {
-    //   width: 100%;
-    // }
+    @include md {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -166,16 +166,16 @@
     border-top: 1px solid #eee;
     padding: 40px 0;
 
-    // @include xs {
-    //   flex-direction: column;
-    //   padding: 20px 0;
-    // }
+    @include xs {
+      flex-direction: column;
+      padding: 20px 0;
+    }
   }
 
   &__left {
-    // @include xs {
-    //   margin-bottom: 20px;
-    // }
+    @include xs {
+      margin-bottom: 20px;
+    }
   }
 
   &__social {
@@ -274,61 +274,61 @@
     padding-bottom: 19px;
     padding-left: 11px;
 
-    // @include md {
-    //   flex-wrap: wrap;
-    // }
+    @include md {
+      flex-wrap: wrap;
+    }
   }
 
-  // .footer__column:first-child {
-  //   @include xs {
-  //     margin-bottom: 30px;
-  //     width: 100%;
+  .footer__column:first-child {
+    @include xs {
+      margin-bottom: 30px;
+      width: 100%;
 
-  //     .footer__social {
-  //       justify-content: center;
-  //     }
-  //   }
-  // }
+      .footer__social {
+        justify-content: center;
+      }
+    }
+  }
 
-  // .footer__column:last-child {
-  //   @include md {
-  //     margin-top: 30px;
-  //     width: 100%;
+  .footer__column:last-child {
+    @include md {
+      margin-top: 30px;
+      width: 100%;
 
-  //     .footer__select {
-  //       margin-right: 50px;
-  //       margin-left: 0;
-  //     }
-  //   }
+      .footer__select {
+        margin-right: 50px;
+        margin-left: 0;
+      }
+    }
 
-  //   @include xs {
-  //     justify-content: center;
+    @include xs {
+      justify-content: center;
 
-  //     .footer__select {
-  //       margin-right: 30px;
-  //       margin-left: 0;
-  //     }
+      .footer__select {
+        margin-right: 30px;
+        margin-left: 0;
+      }
 
-  //     .footer__select:last-child {
-  //       margin-right: 0;
-  //     }
-  //   }
-  // }
+      .footer__select:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 
   .footer__column:nth-child(2) {
     margin-left: 200px;
 
-    // @include lg {
-    //   margin-left: 0;
-    // }
+    @include lg {
+      margin-left: 0;
+    }
 
-    // @include xs {
-    //   width: 100%;
+    @include xs {
+      width: 100%;
 
-    //   .footer__list--row {
-    //     justify-content: center;
-    //   }
-    // }
+      .footer__list--row {
+        justify-content: center;
+      }
+    }
   }
 
   .footer__bottom {
@@ -338,10 +338,10 @@
     padding-left: 5px;
   }
 
-  // .footer__content {
-  //   @include lg-max {
-  //     padding-right: 0;
-  //     padding-left: 0;
-  //   }
-  // }
+  .footer__content {
+    @include lg-max {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 }

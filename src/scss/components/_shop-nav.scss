@@ -6,9 +6,9 @@
     &:not(:last-child) {
       margin-right: 25px;
 
-      // @include xs {
-      //   margin-right: 15px;
-      // }
+      @include xs {
+        margin-right: 15px;
+      }
     }
   }
 
