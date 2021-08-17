@@ -14,18 +14,17 @@ const notify = require('gulp-notify');
 const svgSprite = require('gulp-svg-sprite');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
+const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const fs = require('fs');
 const tiny = require('gulp-tinypng-compress');
-const rev = require('gulp-rev');
-const revRewrite = require('gulp-rev-rewrite');
-const revdel = require('gulp-rev-delete-original');
-const htmlmin = require('gulp-htmlmin');
+
+
 
 // DEV
 //svg sprite
 const svgSprites = () => {
-  return src('./src/img/svg/**.svg')
+  return src('./src/img/**.svg')
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -42,7 +41,7 @@ const resources = () => {
 }
 
 const imgToApp = () => {
-	return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg', './src/img/*.svg'])
+  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg'])
     .pipe(dest('./app/img'))
 }
 
@@ -57,51 +56,12 @@ const htmlInclude = () => {
 }
 
 const fonts = () => {
+  src('./src/fonts/**.ttf')
+    .pipe(ttf2woff())
+    .pipe(dest('./app/fonts/'));
   return src('./src/fonts/**.ttf')
     .pipe(ttf2woff2())
     .pipe(dest('./app/fonts/'));
-}
-
-const checkWeight = (fontname) => {
-  let weight = 400;
-  switch (true) {
-    case /Thin/.test(fontname):
-      weight = 100;
-      break;
-    case /ExtraLight/.test(fontname):
-      weight = 200;
-      break;
-    case /Light/.test(fontname):
-      weight = 300;
-      break;
-    case /Regular/.test(fontname):
-      weight = 400;
-      break;
-    case /Medium/.test(fontname):
-      weight = 500;
-      break;
-    case /SemiBold/.test(fontname):
-      weight = 600;
-      break;
-    case /Semi/.test(fontname):
-      weight = 600;
-      break;
-    case /Bold/.test(fontname):
-      weight = 700;
-      break;
-    case /ExtraBold/.test(fontname):
-      weight = 800;
-      break;
-    case /Heavy/.test(fontname):
-      weight = 700;
-      break;
-    case /Black/.test(fontname):
-      weight = 900;
-      break;
-    default:
-      weight = 400;
-  }
-  return weight;
 }
 
 const cb = () => {}
@@ -117,13 +77,10 @@ const fontsStyle = (done) => {
     if (items) {
       let c_fontname;
       for (var i = 0; i < items.length; i++) {
-				let fontname = items[i].split('.');
-				fontname = fontname[0];
-        let font = fontname.split('-')[0];
-        let weight = checkWeight(fontname);
-
+        let fontname = items[i].split('.');
+        fontname = fontname[0];
         if (c_fontname != fontname) {
-          fs.appendFile(srcFonts, '@include font-face("' + font + '", "' + fontname + '", ' + weight +');\r\n', cb);
+          fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", 400);\r\n', cb);
         }
         c_fontname = fontname;
       }
@@ -202,7 +159,7 @@ const watchFiles = () => {
   watch('./src/img/**.jpg', imgToApp);
   watch('./src/img/**.jpeg', imgToApp);
   watch('./src/img/**.png', imgToApp);
-  watch('./src/img/svg/**.svg', svgSprites);
+  watch('./src/img/**.svg', svgSprites);
   watch('./src/fonts/**', fonts);
   watch('./src/fonts/**', fontsStyle);
 }
@@ -224,11 +181,11 @@ exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources,
 const tinypng = () => {
   return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg'])
     .pipe(tiny({
-      key: 'HkdjDW01hVL5Db6HXSYlnHMk9HCvQfDT',
+      key: '9JGFXhzcvJn1G7PvGRBmZMspkDDtGpwV',
       sigFile: './app/img/.tinypng-sigs',
-      parallel: true,
-      parallelMax: 50,
       log: true,
+      parallel: true,
+      parallelMax: 100,
     }))
     .pipe(dest('./app/img'))
 }
@@ -280,37 +237,9 @@ const scriptsBuild = () => {
     .pipe(dest('./app/js'))
 }
 
-const cache = () => {
-  return src('app/**/*.{css,js,svg,png,jpg,jpeg,woff2}', {
-    base: 'app'})
-    .pipe(rev())
-    .pipe(revdel())
-    .pipe(dest('app'))
-    .pipe(rev.manifest('rev.json'))
-    .pipe(dest('app'));
-};
+exports.tinypng = tinypng;
 
-const rewrite = () => {
-  const manifest = src('app/rev.json');
-
-  return src('app/**/*.html')
-    .pipe(revRewrite({
-      manifest
-    }))
-    .pipe(dest('app'));
-}
-
-const htmlMinify = () => {
-	return src('app/**/*.html')
-		.pipe(htmlmin({
-			collapseWhitespace: true
-		}))
-		.pipe(dest('app'));
-}
-
-exports.cache = series(cache, rewrite);
-
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, htmlMinify, tinypng);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, tinypng);
 
 
 // deploy

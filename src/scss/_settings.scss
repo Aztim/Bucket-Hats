@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  overflow-anchor: none;
   margin: 0;
   font-family: "Jost", sans-serif;
   font-weight: 500;
@@ -22,10 +23,12 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -64,6 +67,7 @@ ul {
 
 .btn-reset {
   border: none;
+  padding: 0;
   background: transparent;
   cursor: pointer;
 }
@@ -71,13 +75,15 @@ ul {
 .container {
   margin: 0 auto;
   padding: 0 40px;
-  // max-width: 1200px;
+
+  @include xs {
+    padding: 0 15px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
-
 
 .main-link {
   position: relative;
@@ -110,4 +116,25 @@ ul {
 
 .container-narrow {
   max-width: 1406px;
+}
+
+.to-top {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 14px 18px;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: rotate(360deg);
+    transition: transform 0.3s;
+  }
 }
