@@ -48,15 +48,15 @@
   }
 
   &--midseason {
-    background-image: url("../img/midseason.jpg");
+    background-image: url("../img/watercraft.png");
   }
 
   &--summer {
-    background-image: url("../img/summer.jpg");
+    background-image: url("../img/atv.png");
   }
 
   &--accs {
-    background-image: url("../img/accs.jpg");
+    background-image: url("../img/moto.png");
   }
 
   @include md {
