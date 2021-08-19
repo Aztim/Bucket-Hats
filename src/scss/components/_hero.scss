@@ -2,16 +2,19 @@
   position: relative;
   height: 1080px;
   min-height: 700px;
-  background-color: var(--quill-gray);
+  // background-color: var(--quill-gray);
+  color: var(--color-white);
+  background: linear-gradient(#1c1c1c, #323232);
 
   &::before {
-    content: "";
+    content: 'Adventure';
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(var(--color-black), 0.05);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16vw;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.05);
   }
 
   &__container {

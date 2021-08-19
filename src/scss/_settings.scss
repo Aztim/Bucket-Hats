@@ -13,8 +13,8 @@ body {
   margin: 0;
   font-family: "Jost", sans-serif;
   font-weight: 500;
-  color: var(--color-dark);
-  background-color: var(--color-white);
+  // color: var(--color-dark);
+  // background-color: var(--color-dark);
 }
 
 img {
@@ -88,7 +88,8 @@ ul {
 .main-link {
   position: relative;
   font-size: 15px;
-  color: var(--color-dark);
+  font-weight: 700;
+  color: var(--color-white);
 
   &::before {
     content: "";
@@ -109,9 +110,9 @@ ul {
     }
   }
 
-  &--white {
-    color: var(--color-white);
-  }
+  // &--white {
+  //   color: var(--color-white);
+  // }
 }
 
 .container-narrow {
