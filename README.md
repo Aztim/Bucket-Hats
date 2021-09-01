@@ -7,9 +7,7 @@
 
 Used technologies | Description |
 :---|:-------------:
-[Vue js](https://ru.vuejs.org) | The Progressive JavaScript Framework
-[Howler JS](https://howlerjs.com/) | Audio library for the modern web.
-[Vuetify](https://vuetifyjs.com/en/) | Material Design Framework.
-[Font Awesome](https://fontawesome.com/) | The internet's most popular icon toolkit.
-[Material Design Icons](https://materialdesignicons.com/) | Material Design Icons' growing icon collection allows designers and developers targeting various platforms to download icons in the format, color and size they need for any project.
-
+[Gulp js](https://gulpjs.com/) | A toolkit to automate & enhance your workflow
+[Sass](https://sass-lang.com/) | Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+[Swiper JS](https://swiperjs.com/) | Swiper is the most modern free mobile touch slider with hardware accelerated transitions and amazing native behavior.
+[Simplebar](https://github.com/Grsmto/simplebar) | SimpleBar does only one thing: replace the browser's default scrollbar with a custom CSS-styled one without losing performances.
